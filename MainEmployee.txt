@@ -1,0 +1,7 @@
+class MainEmployee
+{		
+	Employee e = new Employee();
+	e.setDetails(844928, 22900, "Anil Kumar");
+	e.calculateSalary();
+	e.getDetails();
+}

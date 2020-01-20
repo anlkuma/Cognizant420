@@ -1,0 +1,23 @@
+package com;
+import java.util.*;
+public class MapDemo {
+	
+	public static void main(String args[]) {
+		Map m = new HashMap();
+		m.put(1, "Anil");
+		m.put(2, "Bnil");
+		m.put(3,"Cnil");
+		m.put(4,"Ding");
+		m.put(5,"Ekfjdkfjd");
+		m.remove(4);
+		Set s = m.entrySet();
+		
+		Iterator i= s.iterator();
+		while(i.hasNext()) {
+			Map.Entry e = (Map.Entry)i.next();
+			System.out.println(e.getKey()+" "+e.getValue());
+		}
+	}
+
+		
+}

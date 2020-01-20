@@ -1,0 +1,62 @@
+package com;
+import java.util.*;
+
+public class Employee1 implements Comparator {
+	int employeeID, employeeSalary;
+	String employeeName;
+	public Employee1(int employeeID, int employeeSalary, String employeeName) {
+		super();
+		this.employeeID = employeeID;
+		this.employeeSalary = employeeSalary;
+		this.employeeName = employeeName;
+	}
+	public int getEmployeeID() {
+		return employeeID;
+	}
+	public void setEmployeeID(int employeeID) {
+		this.employeeID = employeeID;
+	}
+	public int getEmployeeSalary() {
+		return employeeSalary;
+	}
+	public void setEmployeeSalary(int employeeSalary) {
+		this.employeeSalary = employeeSalary;
+	}
+	public String getEmployeeName() {
+		return employeeName;
+	}
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+	
+	public int compare(Object o1, Object o2)
+	{
+		Employee1 e1 = (Employee1)o1;
+		Employee1 e2 = (Employee1)o2;
+		return e1.employeeName.compareTo(e2.employeeName);
+	}
+	
+	
+	
+	
+	public static void main(String args[])
+	{
+		
+		
+		ArrayList<Employee1> a2 = new ArrayList<Employee1>();
+		a2.add(new Employee1(001, 2000, "Cnil"));
+		a2.add(new Employee1(002, 3000, "Anil"));
+		a2.add(new Employee1(003, 4000, "Bnil"));
+		
+		Collections.sort(a2,new Employee1(1,1,"a"));
+		Iterator it = a2.iterator();
+		while(it.hasNext()) {		
+			
+			Employee1 ee = (Employee1)it.next();
+			System.out.println(ee.employeeID+" "+ee.employeeName+" "+ee.employeeSalary);
+		}
+		
+		
+		
+	}
+}

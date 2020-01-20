@@ -1,0 +1,58 @@
+package com;
+import java.util.*;
+
+public class Employee implements Comparable<Employee> {
+	int employeeId, employeeSalary;
+	String employeeName;
+	
+	
+	public Employee(int employeeId) {
+		super();
+		this.employeeId = employeeId;
+		/*this.employeeSalary = employeeSalary;
+		this.employeeName = employeeName;*/
+	}
+	
+	
+	public int getEmployeeId() {
+		return employeeId;
+	}
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+	public int getEmployeeSalary() {
+		return employeeSalary;
+	}
+	public void setEmployeeSalary(int employeeSalary) {
+		this.employeeSalary = employeeSalary;
+	}
+	public String getEmployeeName() {
+		return employeeName;
+	}
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+	
+	public int compareTo(Employee id) {
+		return this.employeeId-id.employeeId;	}
+	
+	
+		public static void main(String args[]) {
+			/*Employee e = new Employee(844928, 22000, "Anil");
+			System.out.println("The employee details are: "+e.getEmployeeId()+" "+e.getEmployeeName()+" "+e.getEmployeeSalary());
+			
+			e.setEmployeeId(844982);
+			e.setEmployeeName("Uday");
+			e.setEmployeeSalary(22001);
+			System.out.println("The employee details are: "+e.getEmployeeId()+" "+e.getEmployeeName()+" "+e.getEmployeeSalary());
+*/			ArrayList<Employee> a1  = new ArrayList<Employee>();
+			a1.add(new Employee(10));
+			a1.add(new Employee(12));
+			a1.add(new Employee(14));
+			Collections.sort(a1);
+				for(Employee a:a1)
+					System.out.println(a.employeeId);
+				
+		 	
+		}
+}

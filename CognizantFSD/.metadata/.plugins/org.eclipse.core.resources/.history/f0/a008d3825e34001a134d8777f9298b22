@@ -1,0 +1,16 @@
+import java.util.*;
+public class Puzzle {
+	public static void main(String args[]) {
+		
+		Scanner s= new Scanner(System.in);
+		char a = s.next().charAt(0);
+		int first =65, last =87;
+		int first1 = 97, last1 =122;
+		//int diff = (int)a - first;
+		int diff1 =(int)a - first1;
+			if((int)a>=65 && (int)a<=90)
+			System.out.println((char)(first+last-2*(int)a-first));
+		
+	}
+
+}

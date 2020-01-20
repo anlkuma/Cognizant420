@@ -1,0 +1,68 @@
+package com;
+import java.util.*;
+
+public class MainClass69 implements Comparator {
+	int employeeID, employeeSalary;
+	String employeeName;
+	public MainClass69(int employeeID, int employeeSalary, String employeeName) {
+		super();
+		this.employeeID = employeeID;
+		this.employeeSalary = employeeSalary;
+		this.employeeName = employeeName;
+	}
+	
+	
+	public int compare(Object o1, Object o2)
+	{
+		MainClass69 e1 = (MainClass69)o1;
+		MainClass69 e2 = (MainClass69)o2;
+		return e1.employeeName.compareTo(e2.employeeName);
+	}
+}
+  class IDCompare implements Comparator{
+	  
+	public int compare(Object o1, Object o2) {
+		MainClass69 e1 = (MainClass69)o1;
+		MainClass69 e2 = (MainClass69)o2;
+		if(e1.employeeID>e2.employeeID)
+			return 1;
+		else if(e1.employeeID<e2.employeeID)
+			return -1;
+		else 
+			return 0;
+	}
+}
+	
+	
+	class MainClass6969{
+	public static void main(String args[])
+	{
+		
+		
+		ArrayList<MainClass69> a2 = new ArrayList<MainClass69>();
+		a2.add(new MainClass69(001, 2000, "Cnil"));
+		a2.add(new MainClass69(002, 3000, "Anil"));
+		a2.add(new MainClass69(003, 4000, "Bnil"));
+		
+		Collections.sort(a2,new MainClass69(0,0,"drr"));
+		for(MainClass69 ee:a2)
+			System.out.println(ee.employeeID+" "+ee.employeeName+" "+ee.employeeSalary);
+		
+		Collections.sort(a2, new IDCompare());
+		//Iterator it = a2.iterator();
+		//while(it.hasNext()) {		
+			
+			//Employee1 ee = (Employee1)it.next();
+		
+		for(MainClass69 ee:a2)
+			System.out.println(ee.employeeID+" "+ee.employeeName+" "+ee.employeeSalary);
+		
+		
+		
+		
+	}
+
+}
+
+	
+

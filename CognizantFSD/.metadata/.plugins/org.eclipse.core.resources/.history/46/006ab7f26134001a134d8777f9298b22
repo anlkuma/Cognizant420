@@ -1,0 +1,18 @@
+import java.util.*;
+public class Puzzle {
+	public static void main(String args[]) {
+		
+		Scanner s= new Scanner(System.in);
+		
+		char a = s.next().charAt(0);
+					if((int)a>=65 && (int)a<=90)
+			System.out.println((char)(65+25-((int)a-65)));
+			
+			if((int)a>=97 && (int)a<=122)
+			{
+				System.out.println((char)(97+25-((int)a-97)));
+			}
+		
+	}
+	
+}
